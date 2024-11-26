@@ -9,9 +9,9 @@ export default function IngredientsList(props) {
 
   const handleClick = async () => {
     setIsLoading(true);
-    await props.getRecipe();
+    await props.getRecipe()
     setIsLoading(false);
-  };
+  }; 
 
   return (
     <section>

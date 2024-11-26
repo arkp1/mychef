@@ -27,7 +27,7 @@ export default function Main() {
   const [recipe, setRecipe] = React.useState("");
 
   async function getRecipe() {
-    const recipeMarkdown = await getRecipeFromMistral(ingredients)
+    const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
     console.log(recipeMarkdown);
   }
@@ -43,6 +43,11 @@ export default function Main() {
         />
         <button>Add ingredient</button>
       </form>
+      {!ingredients.length && (
+        <div className="ingredient-note">
+          <p>Add atleast 4 ingredients*</p>
+        </div>
+      )}
       {ingredients.length > 0 && (
         <IngredientsList getRecipe={getRecipe} ingredients={ingredients} />
       )}
