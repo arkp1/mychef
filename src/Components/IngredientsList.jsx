@@ -5,13 +5,13 @@ export default function IngredientsList(props) {
     <li key={ingredient}>{ingredient}</li>
   ));
 
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleClick = async () => {
     setIsLoading(true);
     await props.getRecipe();
     setIsLoading(false);
-  }
+  };
 
   return (
     <section>
