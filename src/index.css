@@ -117,16 +117,7 @@ main ul {
   font-size: 1.125rem;
   font-weight: 400;
   padding: 1rem;
+  max-width: 100%;
+  word-wrap: break-word;
 }
-/* section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 40px;
-  gap: 30px;
-}
-.ingredients-list {
-   
-} */
 
