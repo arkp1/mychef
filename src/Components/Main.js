@@ -17,9 +17,6 @@ export default function Main() {
     const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredient) => [...ingredients, newIngredient]);
     formEl.reset();
-
-    // const data = Object.fromEntries(formData) //to get all data (text, radio buttons etc) from the form
-    // console.log(data)
   }
 
   const [recipe, setRecipe] = React.useState("");
@@ -27,7 +24,6 @@ export default function Main() {
   async function getRecipe() {
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
-    console.log(recipeMarkdown);
   }
 
   return (
@@ -38,6 +34,7 @@ export default function Main() {
           placeholder="e.g. Oregano"
           aria-label="Add ingredient"
           name="ingredient"
+          required
         />
         <button>Add ingredient</button>
       </form>
