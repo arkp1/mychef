@@ -2,8 +2,6 @@ import React from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
 import { getRecipeFromMistral } from "./AI";
-// import { HfInference } from "@huggingface/inference";
-// import { getRecipeFromGemini, searchRecipeByIngredients } from "./AI";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);
