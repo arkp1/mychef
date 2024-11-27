@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   word-wrap: break-word;
-  /* min-width: fit-content; */
+  min-width: fit-content;
 }
 body {
   font-family: "Inter", sans-serif;
@@ -40,7 +40,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 6rem;
   color: #475467;
 }
 .add-ingredient-form {
@@ -49,6 +49,7 @@ main {
   gap: 12px;
   height: 38px;
   flex-wrap: wrap;
+  word-wrap: break-word;
 }
 .add-ingredient-form input {
   border-radius: 6px;
@@ -67,6 +68,7 @@ main {
   border: none;
   border-radius: 6px;
   width: 150px;
+  min-height: 2rem;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
@@ -90,7 +92,7 @@ main ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0.6rem;
+  padding: 3rem;
   min-width: fit-content;
 }
 .ingredients-list {
