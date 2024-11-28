@@ -61,7 +61,7 @@ main {
   min-width: 150px;
   max-width: 400px;
 }
-.add-ingredient-form button {
+.add-ingredient-form .add-ingredient-button {
   font-family: "Inter", sans-serif;
   background-color: black;
   color: white;
@@ -74,9 +74,22 @@ main {
   cursor: pointer;
 }
 
-.add-ingredient-form button::before {
+.add-ingredient-form .add-ingredient-button::before {
   content: "+";
   margin-right: 5px;
+}
+.add-ingredient-form .reset-button {
+  font-family: "Inter", sans-serif;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 3rem;
+  min-width: max-content;
+  min-height: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 main ul {
   display: flex;

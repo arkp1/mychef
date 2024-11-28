@@ -2,6 +2,8 @@ import React from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
 import { getRecipeFromMistral } from "./AI";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);
@@ -26,6 +28,11 @@ export default function Main() {
     setRecipe(recipeMarkdown);
   }
 
+  function resetButton(event) {
+    window.location.reload();
+    event.preventDefault();
+  }
+
   return (
     <main>
       <form onSubmit={addIngredient} className="add-ingredient-form">
@@ -36,7 +43,10 @@ export default function Main() {
           name="ingredient"
           required
         />
-        <button>Add ingredient</button>
+        <button className="add-ingredient-button">Add ingredient</button>
+        <button onClick={resetButton} className="reset-button">
+          <FontAwesomeIcon icon={faRotateRight} />
+        </button>
       </form>
       {!ingredients.length && (
         <div className="ingredient-note">
