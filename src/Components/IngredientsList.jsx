@@ -11,8 +11,8 @@ export default function IngredientsList(props) {
     setIsLoading(true);
     await props.getRecipe()
     setIsLoading(false);
-  }; 
-
+    }; 
+   
   return (
     <section>
       <div className="ingredients-list-container">
