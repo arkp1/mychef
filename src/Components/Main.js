@@ -12,6 +12,7 @@ export default function Main() {
     <li key={ingredient}>{ingredient}</li>
   ));
 
+  //adding ingrediens to the array/list
   function addIngredient(event) {
     event.preventDefault();
     const formEl = event.currentTarget;
@@ -23,14 +24,16 @@ export default function Main() {
 
   const [recipe, setRecipe] = React.useState("");
 
+  // function for getting recipe from AI model
   async function getRecipe() {
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
   }
 
-  function resetButton(event) {
+  // reset function
+  const resetButton = (e) => {
+    e.preventDefault();
     window.location.reload();
-    event.preventDefault();
   }
 
   return (
@@ -54,7 +57,9 @@ export default function Main() {
         </div>
       )}
       {ingredients.length > 0 && (
-        <IngredientsList getRecipe={getRecipe} ingredients={ingredients} />
+        <IngredientsList 
+        getRecipe={getRecipe}
+        ingredients={ingredients} />
       )}
       {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
