@@ -23,4 +23,4 @@ Mistral AI API – Recipe generation
 https://my-chef-web.netlify.app/
 
 📸 Screenshots
-![alt text](image.png)
+![alt text](image-1.png)
