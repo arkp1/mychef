@@ -20,6 +20,8 @@ Mistral AI API – Recipe generation
 .env – Secure API key handling
 
 🚀 Live Demo
+
+
 https://my-chef-web.netlify.app/
 
 📸 Screenshots
